@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title> Prendas </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +11,11 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-item button *ngFor="let item of prendas[0]">
+    <ion-label class="ion-text-wrap">
+      <h2>{{item.descripcion}}</h2>
+      <p>{{item.tipo_prenda_id}}</p>
+    </ion-label>
+  </ion-item>
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
